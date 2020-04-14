@@ -1,11 +1,11 @@
 import React from 'react';
 
-const AdditionalFeature = props => {
+const AdditionalFeature = ({addFeatureHandler, feature}) => {
   return (
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
-      <button className="button">Add</button>
-      {props.feature.name} (+{props.feature.price})
+      <button className="button" onClick={() => addFeatureHandler(feature)}>Add</button>
+      {feature.name} (+{feature.price})
     </li>
   );
 };
